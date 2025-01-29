@@ -170,7 +170,14 @@ class ModelLoader:
             'model_fn': 'get_densenet',
             'model_type': 'densenet_cifar',
             'module': 'models.densenet'
-        },  
+        },
+
+        # Inception-ResNet variants
+        'inception_resnet_v1': {
+            'model_fn': 'get_inception_resnet',
+            'model_type': 'inception_resnet_v1',
+            'module': 'models.inception_resnet_v1'
+        },
     }
     
     def __init__(self):
@@ -303,4 +310,5 @@ class ModelLoader:
         except ImportError:
             print("torchinfo not installed. Run: pip install torchinfo")
             print(model)
+
 
